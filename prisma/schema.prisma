@@ -1,0 +1,18 @@
+generator client {
+    provider = "prisma-client-js"
+    output   = "./generated/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Batch {
+    id            Int      @id @default(autoincrement())
+    serial_number String
+    model         String
+    licenseLevel  Int
+    date          DateTime
+    comment       String
+}

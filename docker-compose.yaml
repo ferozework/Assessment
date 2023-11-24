@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "postgresql://postgres:admin@postgres:5432/hcl"
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: hcl
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:
