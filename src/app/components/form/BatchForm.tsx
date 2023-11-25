@@ -5,8 +5,8 @@ import { ModelOptions, LicenseLevelOptions } from "./constants";
 
 interface FormValues {
   model: string;
-  licenseLevel: number;
-  quantity: number;
+  licenseLevel: number | string;
+  quantity: number | string;
   date: string;
   comment: string;
 }
@@ -14,8 +14,8 @@ interface FormValues {
 const BatchForm: React.FC = () => {
   const initialValues: FormValues = {
     model: "",
-    licenseLevel: 0,
-    quantity: 0,
+    licenseLevel: "",
+    quantity: "",
     date: "",
     comment: "",
   };
@@ -30,10 +30,11 @@ const BatchForm: React.FC = () => {
 
   const handleSubmit = async (
     values: FormValues,
-    { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
+    {
+      setSubmitting,
+      resetForm,
+    }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: any }
   ) => {
-    console.log("values", values);
-
     try {
       const response = await fetch("/api", {
         method: "POST",
@@ -45,11 +46,15 @@ const BatchForm: React.FC = () => {
 
       if (response.ok) {
         console.log("Batch added successfully");
+        alert("Batch added successfully");
+        resetForm();
       } else {
         console.error("Failed to add batch");
+        alert("Failed to add batch");
       }
     } catch (error) {
       console.error("Error:", error);
+      alert(error);
     } finally {
       setSubmitting(false);
     }
@@ -77,7 +82,7 @@ const BatchForm: React.FC = () => {
               onBlur={handleBlur}
               value={values.model}
             >
-              <option value="Model 1" label="Model 1" />
+              <option value="" label="Model" />
               {ModelOptions.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.label}
@@ -112,7 +117,6 @@ const BatchForm: React.FC = () => {
               className="px-6 py-2 w-full mb-2 rounded-md"
               onChange={handleChange}
               onBlur={handleBlur}
-              value={values.quantity}
             />
             <ErrorMessage
               name="quantity"
@@ -128,9 +132,8 @@ const BatchForm: React.FC = () => {
               className="px-6 py-2 w-full mb-2 rounded-md"
               onChange={handleChange}
               onBlur={handleBlur}
-              value={values.licenseLevel}
             >
-              <option value={0} label="License Level" />
+              <option value="" label="License Level" />
               {LicenseLevelOptions.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.label}

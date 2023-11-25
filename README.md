@@ -2,7 +2,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First Run the things related to prisma
+
+# for generating prisma 
+npx prisma generate
+
+# for migrating schema models to database
+npx prisma migrate dev
+
+# for checking tables in the database and data on the tables
+npx prisma studio
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -13,6 +24,9 @@ pnpm dev
 # or
 bun dev
 ```
+
+# for docker run
+docker compose up -d 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

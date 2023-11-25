@@ -120,7 +120,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Jahanzaib\\Desktop\\fcl-assessment\\prisma\\generated\\client",
+      "value": "C:\\Users\\Jahanzaib\\Downloads\\Assessment\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -156,8 +156,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7DQogICAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyINCiAgICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiDQp9DQoNCmRhdGFzb3VyY2UgZGIgew0KICAgIHByb3ZpZGVyID0gInBvc3RncmVzcWwiDQogICAgdXJsICAgICAgPSBlbnYoIkRBVEFCQVNFX1VSTCIpDQp9DQoNCm1vZGVsIEJhdGNoIHsNCiAgICBpZCAgICAgICAgICAgSW50ICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkNCiAgICBzZXJpYWxfbnVtYmVyIFN0cmluZyANCiAgICBtb2RlbCAgICAgICAgU3RyaW5nDQogICAgbGljZW5zZUxldmVsIEludA0KICAgIGRhdGUgICAgICAgICBEYXRlVGltZQ0KICAgIGNvbW1lbnQgICAgICBTdHJpbmcNCn0NCg==",
-  "inlineSchemaHash": "4effb4aa38ce8d61b357a59c778b31f5baf70141842dc430cdc8ac25069428e6",
+  "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7DQogICAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyINCiAgICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiDQp9DQoNCmRhdGFzb3VyY2UgZGIgew0KICAgIHByb3ZpZGVyID0gInBvc3RncmVzcWwiDQogICAgdXJsICAgICAgPSBlbnYoIkRBVEFCQVNFX1VSTCIpDQp9DQoNCm1vZGVsIEJhdGNoIHsNCiAgICBpZCAgICAgICAgICAgIEludCAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpDQogICAgc2VyaWFsX251bWJlciBTdHJpbmcNCiAgICBtb2RlbCAgICAgICAgIFN0cmluZw0KICAgIGxpY2Vuc2VMZXZlbCAgSW50DQogICAgZGF0ZSAgICAgICAgICBEYXRlVGltZQ0KICAgIGNvbW1lbnQgICAgICAgU3RyaW5nDQp9DQo=",
+  "inlineSchemaHash": "0b7db5fee5c397d7035686b68127cd358b02e3ddde7f677b097c7584aebd99f0",
   "noEngine": false
 }
 config.dirname = '/'

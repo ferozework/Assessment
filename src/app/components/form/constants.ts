@@ -1,4 +1,5 @@
 const ModelOptions = [
+  { value: "Model1", label: "Model 1" },
   { value: "Model2", label: "Model 2" },
   { value: "Model3", label: "Model 3" },
 ];
